@@ -3,44 +3,50 @@
     <head>
         <title>YGO Duel Calculator</title>
         <link rel = "stylesheet" type = "text/css" href = "desktop.css">
+        <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet"> <!--Pixel Font-->
     </head>
     <body>
-        <img src = "images/yugi.png" id = "p1Icon">
-        <img src = "images/joey.png" id = "p2Icon">
-
-        <h2 id = "p1Lp">4000</h2>
-        <h2 id = "p2Lp">4000</h2>
+        <table>
+            <tr>
+                <td><img src = "images/yugi.png" id = "p1Icon"></td>
+                <td><img src = "images/joey.png" id = "p2Icon"></td>
+            </tr>
+            <tr>
+                <td><h2 id = "p1Lp">4000</h2></td>
+                <td><h2 id = "p2Lp">4000</h2></td>
+            </tr>
+            <tr>
+                <td><h3 id = "display"></h3></td>
+                <td></td>
+            </tr>
+        </table>
         
         <table>
             <tr>
-                <h3 id = "display"></h3>
+                <td><img id = "7Button" class = "button" src = "images/sevenButton.png"></td>
+                <td><img id = "8Button" class = "button" src = "images/eightButton.png"></td>
+                <td><img id = "9Button" class = "button" src = "images/nineButton.png"></td>
+                <td><img id = "resetButton" src = "images/resetButton.png"></td>
             </tr>
             <tr>
-                <td><button id = "7Button">7</button></td>
-                <td><button id = "8Button">8</button></td>
-                <td><button id = "9Button">9</button></td>
+                <td><img id = "4Button" class = "button" src = "images/fourButton.png"></td>
+                <td><img id = "5Button" class = "button" src = "images/fiveButton.png"></td>
+                <td><img id = "6Button" class = "button" src = "images/sixButton.png"></td>
+                <td><img id = "diceButton" src = "images/diceButton.png"></td>
             </tr>
             <tr>
-                <td><button id = "4Button">4</button></td>
-                <td><button id = "5Button">5</button></td>
-                <td><button id = "6Button">6</button></td>
+                <td><img id = "1Button" class = "button" src = "images/oneButton.png"></td>
+                <td><img id = "2Button" class = "button" src = "images/twoButton.png"></td>
+                <td><img id = "3Button" class = "button" src = "images/threeButton.png"></td>
+                <td><img id = "coinButton" src = "images/coinButton.png"></td>
             </tr>
             <tr>
-                    <td><button id = "1Button">1</button></td>
-                    <td><button id = "2Button">2</button></td>
-                    <td><button id = "3Button">3</button></td>
-            </tr>
-            <tr>
-                    <td><button id = "plusButton"">+</button></td>
-                    <td><button id = "0Button">0</button></td>
-                    <td><button id = "minusButton">-</button></td>
-                    <td><button id = "clearButton">CE</button></td>
+                <td><img id = "plusButton" class = "button" src = "images/plusButton.png"></td>
+                <td><img id = "0Button" class = "button" src = "images/zeroButton.png"></td>
+                <td><img id = "minusButton" class = "button" src = "images/minusButton.png"></td>
+                <td><img id = "clearButton" class = "button" src = "images/clearButton.png"></td>
             </tr>
         </table>
-
-        <button id = "diceButton">Dice</button>
-        <button id = "coinButton">Coin</button>
-        <button id = "resetButton">Reset</button>
 
         <script src = "calculator.js"></script>
     </body>

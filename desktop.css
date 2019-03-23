@@ -1,0 +1,46 @@
+table{
+    margin-left: auto;
+    margin-right: auto;
+}
+td{
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+}
+
+#p1Lp, #p2Lp, #display{
+    font-family: 'Press Start 2P', cursive;
+    font-size: 80px;
+}
+
+#p1Lp, #p2Lp, #p1Icon, #p2Icon{
+    margin-left: 10vw;
+    margin-right: 10vw;
+    width: 50%;
+    position: center;
+}
+
+#p1Lp{
+    border-left: 10px solid red;
+    padding: 10px;
+    margin-top: 5vh;
+}
+
+#p1Icon{
+    border: 10px solid red;
+}
+
+#p2Lp{
+    border-left: 10px solid blue;
+    padding: 10px;
+    margin-top: 5vh;
+}
+
+#p2Icon{
+    border: 10px solid blue;
+}
+
+#display{
+    border-left: 10px solid black;
+    padding: 10px;
+}
