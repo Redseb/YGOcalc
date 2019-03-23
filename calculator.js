@@ -46,6 +46,9 @@ clearButton.addEventListener("click", clear, false);
 var addFlag = false; //flags used for calculate() and flagSetting functions
 var subFlag = false;
 
+var resetButton = document.getElementById("resetButton");
+resetButton.addEventListener("click", reset, false);
+
 
 function digitPressed(digit){
     if(display.innerHTML == 0){ //If the display is empty overwrite the 0
@@ -90,4 +93,13 @@ function calculate(playerLp){
         //Neither flag is selected
         alert("First select \'+\' or \'-\'");
     }
+}
+
+function reset(){
+    console.log("Resetting player's LP and display")
+    p1Lp.innerHTML = 4000;
+    p2Lp.innerHTML = 4000;
+    display.innerHTML = 0;
+    addFlag = false;
+    subFlag = false;
 }
