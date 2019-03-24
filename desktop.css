@@ -44,3 +44,8 @@ td{
     border-left: 10px solid black;
     padding: 10px;
 }
+
+#chanceDisplay{
+    min-width: 256px;
+    min-height: 256px;
+}

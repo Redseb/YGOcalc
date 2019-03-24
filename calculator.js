@@ -1,6 +1,8 @@
 var display = document.getElementById("display");
 display.innerHTML = 0; //Initialize the display
 
+var chanceDisplay = document.getElementById("chanceDisplay");
+
 var p1Icon = document.getElementById("p1Icon");
 var p1Lp = document.getElementById("p1Lp");
 var p2Icon = document.getElementById("p2Icon");
@@ -20,18 +22,22 @@ nineButton.addEventListener("click", function(){digitPressed(9);}, false);
 var fourButton = document.getElementById("4Button");
 var fiveButton = document.getElementById("5Button");
 var sixButton = document.getElementById("6Button");
+var diceButton = document.getElementById("diceButton");
 
 fourButton.addEventListener("click", function(){digitPressed(4);}, false);
 fiveButton.addEventListener("click", function(){digitPressed(5);}, false);
 sixButton.addEventListener("click", function(){digitPressed(6);}, false);
+diceButton.addEventListener("click", rollAnimation, false);
 
 var oneButton = document.getElementById("1Button");
 var twoButton = document.getElementById("2Button");
 var threeButton = document.getElementById("3Button");
+var coinButton = document.getElementById("coinButton");
 
 oneButton.addEventListener("click", function(){digitPressed(1);}, false);
 twoButton.addEventListener("click", function(){digitPressed(2);}, false);
 threeButton.addEventListener("click", function(){digitPressed(3);}, false);
+coinButton.addEventListener("click", flippingAnimation, false);
 
 var plusButton = document.getElementById("plusButton");
 var zeroButton = document.getElementById("0Button");
@@ -102,4 +108,42 @@ function reset(){
     display.innerHTML = 0;
     addFlag = false;
     subFlag = false;
+    chanceDisplay.src = "";
+}
+
+function rollAnimation(){
+    chanceDisplay.src = "images/diceRoll.gif";
+    setTimeout(roll, 2000);
+
+}
+
+function roll() {
+    var randomNumber = Math.floor(Math.random() * Math.floor(6)) + 1; //Generate random number
+    if(randomNumber == 1){
+        chanceDisplay.src = "images/d1.png"
+    } else if(randomNumber == 2){
+        chanceDisplay.src = "images/d2.png";
+    } else if(randomNumber == 3){
+        chanceDisplay.src = "images/d3.png";
+    } else if(randomNumber == 4){
+        chanceDisplay.src = "images/d4.png";
+    } else if(randomNumber == 5){
+        chanceDisplay.src = "images/d5.png";
+    } else if(randomNumber == 6){
+        chanceDisplay.src = "images/d6.png";
+    }
+}
+
+function flippingAnimation(){
+    chanceDisplay.src = "images/coinFlip.gif";
+    setTimeout(flip, 2000);
+}
+
+function flip(){
+    var randomNumber = Math.floor(Math.random() * Math.floor(2)) + 1; //Generate random number
+    if (randomNumber == 1){
+        chanceDisplay.src = "images/coinHeads.png";
+    } else if (randomNumber == 2){
+        chanceDisplay.src = "images/coinTails.png";
+    }
 }
