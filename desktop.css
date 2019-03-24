@@ -28,6 +28,8 @@ td{
 
 #p1Icon{
     border: 10px solid red;
+    width: 256px;
+    height: 256px;
 }
 
 #p2Lp{
@@ -38,6 +40,8 @@ td{
 
 #p2Icon{
     border: 10px solid blue;
+    width: 256px;
+    height: 256px;
 }
 
 #display{
